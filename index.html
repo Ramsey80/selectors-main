@@ -15,8 +15,13 @@
             li.my-list{
                 background-color:orange;
             }
+
             li.new-list, div#new-div{
                 background-color:blue;
+            }
+
+            div.grandkids li{
+                background-color:red;
             }
         </style>
     </head>
@@ -30,6 +35,7 @@
                 <li><a href="#id">id</a></li>
                 <li><a href="#class">class</a></li>
                 <li><a href="#compound">compound</a></li>
+                <li><a href="#descendant">descendant</a></li>
             </ul>
         </nav> 
     </header>           
@@ -88,6 +94,26 @@
                 </ul>
             </div>
             <div id="new-div">Inside my-div</div>
+        </fieldset>
+
+        <fieldset>
+            <legend><a id="descendant">descendant</a></legend>
+            <pre><code>class="new-list", div#new-div</code></pre>
+            <p>descendant selectors let us access elements at any depth within the current element</p>
+            <p>Here's how the CSS is applied to the element</p>
+            <pre><code>
+                li.new-list{
+                    background-color:blue;
+                }</code></pre>
+
+            <p>Here's what it looks like:</p>
+            <div class = "grandkids">
+                <ul>
+                    <li >I'm in an li inside the grandkids div </li>
+                    <li >I'm in an li inside the grandkids div </li>
+                    <li >I'm in an li inside the grandkids div </li>
+                </ul>
+            </div>
         </fieldset>
 
         <footer class="page-footer">
